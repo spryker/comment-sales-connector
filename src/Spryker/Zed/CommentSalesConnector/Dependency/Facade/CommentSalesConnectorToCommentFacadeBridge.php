@@ -27,23 +27,11 @@ class CommentSalesConnectorToCommentFacadeBridge implements CommentSalesConnecto
         $this->commentFacade = $commentFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CommentRequestTransfer $commentRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\CommentThreadTransfer|null
-     */
     public function findCommentThreadByOwner(CommentRequestTransfer $commentRequestTransfer): ?CommentThreadTransfer
     {
         return $this->commentFacade->findCommentThreadByOwner($commentRequestTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CommentFilterTransfer $commentFilterTransfer
-     * @param \Generated\Shared\Transfer\CommentRequestTransfer $commentRequestTransfer
-     * @param bool|null $forceDelete
-     *
-     * @return \Generated\Shared\Transfer\CommentThreadResponseTransfer
-     */
     public function duplicateCommentThread(
         CommentFilterTransfer $commentFilterTransfer,
         CommentRequestTransfer $commentRequestTransfer,

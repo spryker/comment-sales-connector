@@ -17,11 +17,6 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class SalesController extends AbstractController
 {
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return array
-     */
     public function listAction(Request $request): array
     {
         $orderTransfer = $this->getOrder($request);

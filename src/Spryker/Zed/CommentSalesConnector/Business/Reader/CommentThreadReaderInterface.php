@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\OrderTransfer;
 
 interface CommentThreadReaderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\OrderTransfer $orderTransfer
-     *
-     * @return \Generated\Shared\Transfer\CommentThreadTransfer|null
-     */
     public function findCommentThreadByOrder(OrderTransfer $orderTransfer): ?CommentThreadTransfer;
 }

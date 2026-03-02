@@ -21,21 +21,11 @@ class CommentThreadWriter implements CommentThreadWriterInterface
      */
     protected $commentFacade;
 
-    /**
-     * @param \Spryker\Zed\CommentSalesConnector\Dependency\Facade\CommentSalesConnectorToCommentFacadeInterface $commentFacade
-     */
     public function __construct(CommentSalesConnectorToCommentFacadeInterface $commentFacade)
     {
         $this->commentFacade = $commentFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SaveOrderTransfer $saveOrderTransfer
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     * @param bool|null $forceDelete
-     *
-     * @return void
-     */
     public function attachCommentThreadToOrder(
         SaveOrderTransfer $saveOrderTransfer,
         QuoteTransfer $quoteTransfer,

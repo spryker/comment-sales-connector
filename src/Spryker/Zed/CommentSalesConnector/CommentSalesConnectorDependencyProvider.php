@@ -21,11 +21,6 @@ class CommentSalesConnectorDependencyProvider extends AbstractBundleDependencyPr
      */
     public const FACADE_COMMENT = 'FACADE_COMMENT';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -34,11 +29,6 @@ class CommentSalesConnectorDependencyProvider extends AbstractBundleDependencyPr
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCommentFacade(Container $container): Container
     {
         $container->set(static::FACADE_COMMENT, function (Container $container) {

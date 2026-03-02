@@ -20,19 +20,11 @@ class CommentThreadReader implements CommentThreadReaderInterface
      */
     protected $commentFacade;
 
-    /**
-     * @param \Spryker\Zed\CommentSalesConnector\Dependency\Facade\CommentSalesConnectorToCommentFacadeInterface $commentFacade
-     */
     public function __construct(CommentSalesConnectorToCommentFacadeInterface $commentFacade)
     {
         $this->commentFacade = $commentFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\OrderTransfer $orderTransfer
-     *
-     * @return \Generated\Shared\Transfer\CommentThreadTransfer|null
-     */
     public function findCommentThreadByOrder(OrderTransfer $orderTransfer): ?CommentThreadTransfer
     {
         $orderTransfer->requireIdSalesOrder();

@@ -14,20 +14,8 @@ use Generated\Shared\Transfer\CommentThreadTransfer;
 
 interface CommentSalesConnectorToCommentFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CommentRequestTransfer $commentRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\CommentThreadTransfer|null
-     */
     public function findCommentThreadByOwner(CommentRequestTransfer $commentRequestTransfer): ?CommentThreadTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\CommentFilterTransfer $commentFilterTransfer
-     * @param \Generated\Shared\Transfer\CommentRequestTransfer $commentRequestTransfer
-     * @param bool|null $forceDelete
-     *
-     * @return \Generated\Shared\Transfer\CommentThreadResponseTransfer
-     */
     public function duplicateCommentThread(
         CommentFilterTransfer $commentFilterTransfer,
         CommentRequestTransfer $commentRequestTransfer,

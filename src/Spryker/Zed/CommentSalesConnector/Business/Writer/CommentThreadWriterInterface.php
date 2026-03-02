@@ -12,13 +12,6 @@ use Generated\Shared\Transfer\SaveOrderTransfer;
 
 interface CommentThreadWriterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\SaveOrderTransfer $saveOrderTransfer
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     * @param bool|null $forceDelete
-     *
-     * @return void
-     */
     public function attachCommentThreadToOrder(
         SaveOrderTransfer $saveOrderTransfer,
         QuoteTransfer $quoteTransfer,
